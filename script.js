@@ -59,7 +59,7 @@ function triangle(val1, type1, val2, type2) {
         let ang = (type1 === "angle") ? val1 : val2;
 
         if (ang >= 90) {
-            console.log("Angle must be acute (< 90)");
+            console.log("Кут має бути гострим(< 90)");
             return "failed";
         }
 
@@ -90,7 +90,7 @@ function triangle(val1, type1, val2, type2) {
         let oppAngle = (type1 === "opposite angle") ? val1 : val2;
 
         if (oppAngle >= 90) {
-            console.log("Angle must be acute (< 90)");
+            console.log("Кут має бути гострим(< 90)");
             return "failed";
         }
 
