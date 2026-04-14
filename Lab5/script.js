@@ -10,7 +10,8 @@ const finalScoreDisplay = document.getElementById('finalScore');
 const timeDisplay = document.getElementById('timeDisplay');
 
 let score = 0;
-let timer;
+let countdownInterval; 
+let timeRemaining;    
 let currentX, currentY;
 
 let config = {
@@ -45,7 +46,6 @@ startBtn.addEventListener('click', () => {
             config = { size: 20, range: 500, time: 1000 };
             break;
     }
-    timeDisplay.innerText = config.time / 1000;
 
     pixel.style.width = `${config.size}px`;
     pixel.style.height = `${config.size}px`;
@@ -80,11 +80,11 @@ function calculateNewPosition() {
     } while (
         attempts < 20 && 
         (newX < 0 || newX > window.innerWidth - config.size || 
-         newY < 60 || newY > window.innerHeight - config.size) 
+         newY < 80 || newY > window.innerHeight - config.size) 
     );
 
     newX = Math.max(0, Math.min(newX, window.innerWidth - config.size));
-    newY = Math.max(60, Math.min(newY, window.innerHeight - config.size));
+    newY = Math.max(80, Math.min(newY, window.innerHeight - config.size));
 
     currentX = newX;
     currentY = newY;
@@ -95,13 +95,23 @@ function movePixel(x, y) {
     pixel.style.left = `${x}px`;
     pixel.style.top = `${y}px`;
 }
-
 function startRound() {
-    clearTimeout(timer);
+    clearInterval(countdownInterval);
     
-    timer = setTimeout(() => {
-        endGame();
-    }, config.time);
+    timeRemaining = config.time;
+    
+    timeDisplay.innerText = (timeRemaining / 1000).toFixed(1);
+    
+    countdownInterval = setInterval(() => {
+        timeRemaining -= 100;
+        timeDisplay.innerText = (timeRemaining / 1000).toFixed(1);
+
+        if (timeRemaining <= 0) {
+            clearInterval(countdownInterval); 
+            timeDisplay.innerText = "0.0";    
+            endGame();                        
+        }
+    }, 100);
 }
 
 function endGame() {
