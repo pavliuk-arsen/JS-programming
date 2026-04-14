@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Hunt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <h1>Pixel Hunt</h1>
+        <div class="selectors">
+            <select id="difficulty">
+                <option value="" disabled selected>Оберіть складність</option>
+                <option value="easy">Легкий</option>
+                <option value="medium">Середній</option>
+                <option value="hard">Складний</option>
+            </select>
+            
+            <select id="color">
+                <option value="" disabled selected>Оберіть колір</option>
+                <option value="#ff4757">Червоний</option>
+                <option value="#1e90ff">Синій</option>
+                <option value="#2ed573">Зелений</option>
+                <option value="#ffa502">Помаранчевий</option>
+            </select>
+        </div>
+        <button id="startBtn" disabled>Старт</button>
+    </div>
+
+    <div id="gameArea" style="display: none;">
+        <div id="stats">
+            <span>Рахунок: <span id="score">0</span></span><br>
+            <span style="font-size: 18px; font-weight: normal; color: #ced6e0;">Час на клік: <span id="timeDisplay">0</span> с</span>
+        </div>
+        <div id="pixel"></div>
+    </div>
+
+    <div id="gameOver" style="display: none;">
+        <h2>Час вийшов!</h2>
+        <p>Твій фінальний рахунок: <span id="finalScore">0</span></p>
+        <button onclick="location.reload()">Перезапустити гру</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
