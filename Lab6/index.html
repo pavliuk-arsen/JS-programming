@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lights Out 5x5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-wrapper">
+        <h1>Lights Out</h1>
+        
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="label">Мінімально ходів:</span>
+                <span id="min-moves" class="value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="label">Ваші ходи:</span>
+                <span id="current-moves" class="value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="label">Час:</span>
+                <span id="timer" class="value">00:00</span>
+            </div>
+        </div>
+
+        <div id="grid" class="game-grid">
+            </div>
+
+        <div class="button-group">
+            <button id="btn-restart" class="btn btn-secondary">Restart</button>
+            <button id="btn-newgame" class="btn btn-primary">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
