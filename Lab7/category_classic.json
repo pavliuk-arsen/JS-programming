@@ -1,0 +1,29 @@
+{
+    "category_name": "Класична кава",
+    "items": [
+      {
+        "id": 101,
+        "name": "Еспресо",
+        "shortname": "espresso",
+        "description": "Міцна чорна кава з насиченим смаком.",
+        "price": 45,
+        "image": "img/espresso.png"
+      },
+      {
+        "id": 102,
+        "name": "Капучино",
+        "shortname": "capuccino",
+        "description": "Класичне поєднання еспресо та молочної пінки.",
+        "price": 65,
+        "image": "img/capputino.png"
+      },
+      {
+        "id": 103,
+        "name": "Американо",
+        "shortname": "americano",
+        "description": "Кавовий напій, що містить велику кількість води.",
+        "price": 65,
+        "image": "img/americano.png"
+      }
+    ]
+  }

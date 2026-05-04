@@ -1,0 +1,29 @@
+{
+    "category_name": "Холодні напої",
+    "items": [
+      {
+        "id": 201,
+        "name": "Айс-Лате",
+        "shortname": "ice-latte",
+        "description": "Ніжне поєднання холодного молока, еспресо та льоду. Lorem ipsum dolor sit amet.",
+        "price": 75,
+        "image": "img/latte.png"
+      },
+      {
+        "id": 202,
+        "name": "Фрапе",
+        "shortname": "frappe",
+        "description": "Грецький кавовий напій зі збитою піною та льодом. Lorem ipsum.",
+        "price": 70,
+        "image": "img/frappe.png"
+      },
+      {
+        "id": 203,
+        "name": "Bumble",
+        "shortname": "bumble",
+        "description": "Шари еспресо, карамелі та апельсинового соку. Справжній хіт літа.",
+        "price": 85,
+        "image": "img/bumble.png"
+      }
+    ]
+  }

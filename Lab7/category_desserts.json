@@ -1,0 +1,29 @@
+{
+    "category_name": "Десерти",
+    "items": [
+      {
+        "id": 301,
+        "name": "Чізкейк Нью-Йорк",
+        "shortname": "cheesecake",
+        "description": "Класичний сирний десерт на пісочній основі. Lorem ipsum dolor sit.",
+        "price": 95,
+        "image": "img/cheesecake.png"
+      },
+      {
+        "id": 302,
+        "name": "Тірамісу",
+        "shortname": "tiramisu",
+        "description": "Італійський десерт з маскарпоне та просоченим кавою печивом.",
+        "price": 110,
+        "image": "img/tiramisu.png"
+      },
+      {
+        "id": 304,
+        "name": "Брауні",
+        "shortname": "brownie",
+        "description": "Насичений шоколадний десерт з вологою серединою.",
+        "price": 65,
+        "image": "img/brauni.png"
+      }
+    ]
+  }
