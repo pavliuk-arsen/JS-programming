@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Адаптивна Сторінка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+<nav>
+  
+  <div class="nav-links">
+    <a href="#" class="active">
+      <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+      Головна
+    </a>
+    <a href="#">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      Галерея
+    </a>
+    <a href="#">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Архів
+    </a>
+    <a href="#">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Блог
+    </a>
+    <a href="#">
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Контакт
+    </a>
+  </div>
+ 
+  <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+ 
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">
+    <svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+    Головна
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    Галерея
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    Архів
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Блог
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    Контакт
+  </a>
+</div>
+ 
+<main>
+  <section>
+    <h2 class="section-title">Карусель зображень</h2>
+ 
+    <div class="carousel-wrap" id="carousel">
+      <div class="carousel-track" id="track">
+ 
+        <div class="carousel-slide">
+          <img src="images/MarleyManiac.jpg" alt="Слайд 1" />
+          <div class="slide-caption">
+            <h3>Марлі маньяк</h3>
+          </div>
+        </div>
+ 
+        <div class="carousel-slide">
+          <img src="images/DrivingMarley.jpg" alt="Слайд 2" />
+          <div class="slide-caption">
+            <h3>Марлі водій</h3>
+          </div>
+        </div>
+ 
+        <div class="carousel-slide">
+          <img src="images/IntrestedMarley.jpg" alt="Слайд 3" />
+          <div class="slide-caption">
+            <h3>Зацікавлений Марлі</h3>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="carousel-progress" id="carouselProgress"></div>
+ 
+      <button class="carousel-btn prev" id="prevBtn" aria-label="Попередній">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="carousel-btn next" id="nextBtn" aria-label="Наступний">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+ 
+    <div class="carousel-dots" id="dots"></div>
+  </section>
+ 
+  <section class="large-only">
+    <p class="section-label">Тільки для широкого екрану</p>
+    <h2 class="section-title">Виключно для Large</h2>
+    <span class="badge badge-large">≥ 768 px</span>
+ 
+    <div class="img-grid">
+      <div class="img-card">
+        <img src="images/HBMarley.jpg" alt="Large 1" />
+        <div class="img-card-body">
+          <h4>День народження Марлі</h4>
+        </div>
+      </div>
+      <div class="img-card">
+        <img src="images/ChillMarley.jpg" alt="Large 2" />
+        <div class="img-card-body">
+          <h4>Марлі чілить</h4>
+        </div>
+      </div>
+      <div class="img-card">
+        <img src="images/MarleyOnBeach.jpg" alt="Large 3" />
+        <div class="img-card-body">
+          <h4>Марлі на пляжі</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="medium-only">
+    <p class="section-label">Тільки для вузького екрану</p>
+    <h2 class="section-title">Виключно для Medium</h2>
+    <span class="badge badge-medium">&lt; 768 px</span>
+ 
+    <div class="img-grid">
+      <div class="img-card">
+        <img src="images/SmollMarley.jpg" alt="Medium 1" />
+        <div class="img-card-body">
+          <h4>Марлі маленький</h4>
+        </div>
+      </div>
+      <div class="img-card">
+        <img src="images/SmollMarley2.jpg" alt="Medium 2" />
+        <div class="img-card-body">
+          <h4>Марлі маленький 2</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</main>
+ 
+<script src="script.js"></script>
+</body>
+</html>
